@@ -41,7 +41,7 @@ class AutoUpdate {
 		// Load language file
 		add_action( 'plugins_loaded', array( &$this, 'autoupdate_load_textdomain' ), 2 );
 
-		// Add Settings Link
+		// Add Support Link
 		add_filter( 'plugin_action_links_'.plugin_basename(__FILE__), array( &$this, 'autoupdate_links' ), 1 );
 
 	}
