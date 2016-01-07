@@ -35,13 +35,13 @@ class AutoUpdate {
 	 */
 	public function __construct() {
 
-		// Define constants
+		// Enable Update filters
 		add_action( 'plugins_loaded', array( &$this, 'autoupdate_filters' ), 1 );
 
 		// Load language file
 		add_action( 'plugins_loaded', array( &$this, 'autoupdate_load_textdomain' ), 2 );
 
-		// Add Setings Link
+		// Add Settings Link
 		add_filter( 'plugin_action_links_'.plugin_basename(__FILE__), array( &$this, 'autoupdate_links' ), 1 );
 
 	}
