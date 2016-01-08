@@ -31,7 +31,7 @@ No options, just activate it!
 
 == Changelog ==
 
-= 1.0.1
+= 1.0.1 =
 * Fixed: translation text domain
 
 = 1.0.0 =
