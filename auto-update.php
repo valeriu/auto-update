@@ -3,8 +3,9 @@
  * Plugin Name: Auto Update
  * Plugin URI: https://stylishwp.com
  * Description: This plugin enable Automatic Background Updates for WordPress core, Themes and Plugins.
- * Text Domain: autoupdate
- * Version: 1.0.0
+ * Text Domain: auto-update
+ * Domain Path: /languages
+ * Version: 1.0.1
  * Author: Valeriu Tihai
  * Author URI: http://valeriu.tihai.ca
  * Contributors: valeriutihai
@@ -72,13 +73,13 @@ class AutoUpdate {
 	 * Load language file
 	 *
 	 * This will load the MO file for the current locale.
-	 * The translation file must be named autoupdate-$locale.mo.
+	 * The translation file must be named auto-update-$locale.mo.
 	 *
 	 * @since 1.0.0
 	 * @access public
 	 */
 	public function autoupdate_load_textdomain() {
-		load_plugin_textdomain( 'autoupdate', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
+		load_plugin_textdomain( 'auto-update', false, dirname( plugin_basename(__FILE__) ) . '/languages/' );
 	}
 
 	/**
@@ -88,7 +89,7 @@ class AutoUpdate {
 	 * @access  public
 	 */
 	public function autoupdate_links( $links ) {
-		$links[] = '<a href="https://wordpress.org/support/plugin/auto-update" target="_blank">'.__("Support", 'autoupdate').'</a>';
+		$links[] = '<a href="https://wordpress.org/support/plugin/auto-update" target="_blank">'.__("Support", 'auto-update').'</a>';
 		return $links;
 	}
 
