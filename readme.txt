@@ -4,21 +4,28 @@ Tags: automatic updates, background updates, core updates, plugin updates, theme
 Requires at least: 5.8
 Requires PHP: 7.4
 Tested up to: 6.9
-Stable tag: 1.0.2
+Stable tag: 1.1.0
 Donate link: https://paypal.me/valeriu/5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Keeps WordPress core, plugins, and themes updated automatically to reduce manual maintenance and improve security.
+Adds a settings page for managing automatic updates for WordPress core, plugins, and themes.
 
 == Description ==
-Auto Update is built for site owners who want WordPress to stay current without logging in to run updates manually.
+Auto Update is built for site owners who want a simple way to manage WordPress automatic updates from one place.
 
-It keeps WordPress core, plugins, and themes updated automatically, which helps reduce maintenance work, apply security fixes sooner, and keep the site closer to the latest stable releases.
+When the plugin is activated, automatic updates for WordPress core, plugins, and themes remain enabled by default, just like in the previous version.
 
-Once activated, it enables both minor and major core updates and allows installed plugins and themes to update in the background.
+You can choose automatic updates for:
 
-There is no settings page. Activate the plugin and let WordPress handle updates automatically.
+* Minor WordPress core releases
+* Major WordPress core releases
+* Plugins
+* Themes
+
+This makes it easier to reduce manual maintenance while still keeping control over how updates are enabled on the site.
+
+Checked options are forced on by the plugin. Unchecked options are forced off.
 
 == Installation ==
 In most cases you can install automatically from WordPress.org.
@@ -27,21 +34,30 @@ However, if you install this manually, follow these steps:
 1. Create the directory 'auto-update' in your '/wp-content/plugins/' directory
 2. Upload all plugin files to the newly created directory
 3. Activate the plugin through the 'Plugins' menu in WordPress
-
-Note: There is no "control panel" for this plugin.
+4. Go to 'Settings > Auto Update' and save your preferred update options
 
 == Screenshots ==
 None so far.
 
 == Frequently Asked Questions ==
-No options, just activate it!
+How do I enable automatic updates?
+
+Activate the plugin, go to 'Settings > Auto Update', choose the update types you want, and save the settings.
 
 == Changelog ==
+
+= 1.1.0 =
+* Added: settings page for managing automatic updates
+* Added: separate options for minor core, major core, plugin, and theme updates
+* Added: uninstall cleanup for plugin settings
+* Changed: automatic updates remain enabled by default and can now be customized from the settings page
+* Changed: checked options now force updates on and unchecked options force them off
+* Changed: refactored the plugin bootstrap into a standard includes-based structure
 
 = 1.0.2 =
 * Updated: tested up to WordPress 6.9
 * Updated: minimum supported PHP version is 7.4
-* Changed: removed the manual translation loading call and rely on WordPress.org language loading
+* Changed: removed the manual translation loading call and now rely on WordPress.org language loading
 
 = 1.0.1 =
 * Fixed: translation text domain
